@@ -29,9 +29,9 @@ Is a SQLServer application containing all the persistence needed to store and ma
   - latest version of docker
   - Intenet connection
 
-##
-git clone <this repo>
-$>cd <repo>; cd IdeaManager_FE; dotnet restore
-$>cd <repo>; cd IdeaManager_API; dotnet restore
-$>docker-compose up
-Navigate to http://localhost
+## Building
+ - git clone <this repo>
+ - \$>cd <repo>; cd IdeaManager_FE; dotnet restore
+ - \$>cd <repo>; cd IdeaManager_API; dotnet restore
+ - \$>docker-compose up
+ - Navigate to http://localhost
