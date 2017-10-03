@@ -30,7 +30,7 @@ Is a SQLServer application containing all the persistence needed to store and ma
   - Intenet connection
 
 ## Building
- - git clone <this repo>
+ - git clone this_repo_url
  - \$>cd <repo>; cd IdeaManager_FE; dotnet restore
  - \$>cd <repo>; cd IdeaManager_API; dotnet restore
  - \$>docker-compose up
