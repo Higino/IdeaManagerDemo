@@ -1,0 +1,18 @@
+<svg width="1140" height="360" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter height="200%" width="200%" y="-50%" x="-50%" id="svg_7_blur">
+   <feGaussianBlur stdDeviation="1.1" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m0,0l1140,0l0,360l-1140,0l0,-360z" fill="#56B4D9"/>
+  <path id="svg_2" d="m431.5,62l-1,0l0,74l1,0l0,-74z" fill="#fff"/>
+  <text filter="url(#svg_7_blur)" font-style="italic" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="44" id="svg_7" y="114.5" x="118" stroke-opacity="null" stroke-width="0" stroke="null" fill="#fcfcfc">Idea Manager</text>
+  <text xml:space="preserve" text-anchor="start" font-family="'Trebuchet MS', Gadget, sans-serif" font-size="44" id="svg_8" y="111.5" x="464" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="null" fill="#fcfcfc">Your way to manage Ideas</text>
+ </g>
+</svg>
