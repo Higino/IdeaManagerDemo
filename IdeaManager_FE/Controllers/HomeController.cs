@@ -22,16 +22,23 @@ namespace IdeaManager_FE.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-    }
+
+        public IActionResult IdeaCreator()
+        {
+            ViewData["Message"] = "A message";
+
+            return View();
+        }
+
+		public IActionResult IdeaDeployer()
+		{
+			ViewData["Message"] = "A message";
+
+			return View();
+		}
+	}
 }
