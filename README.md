@@ -31,7 +31,8 @@ Is a SQLServer application containing all the persistence needed to store and ma
 
 ## Building
  - git clone this_repo_url
- - \$>cd <repo>; cd IdeaManager_FE; dotnet restore
- - \$>cd <repo>; cd IdeaManager_API; dotnet restore
+ - \$>cd <repo>; cd IdeaManager_FE; dotnet restore; docker build -t ideamanager_fe .
+ - \$>cd <repo>; cd IdeaManager_API; dotnet restore; docker build -t ideamanager_api .
+ - \$>cd <repo>; cd IdeaManager_RP; docker build -t ideamanager_rp .  
  - \$>docker-compose up
  - Navigate to http://localhost
