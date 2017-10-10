@@ -1,34 +1,116 @@
 ﻿@{
     ViewData["Title"] = "Idea Creator Miniapp";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
+<!-- <h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3> -->
+<div class="jumbotron">
+    <h1><img src="../images/idea-light-bulb.svg" class="img-rounded" alt="idea" width="100" height="100"/> @ViewData["Title"]</h1>
+    <p>This is a miniapp where users can submit and manage their ideas</p>
+</div>
 
-<p>In this area, a user should be able to list all ideas and submit his/her idea</p>
-<div class="row">
-    <div class="col-md-3">
-        <h2>Build an idea</h2>
-        <img src="../images/idea-light-bulb.svg" class="img-rounded" alt="idea" width="200" height="200"/>
-        <ul>
-            <li>Gret help oin the idea creation process</li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518004">IdeaCreator miniapp</a> for managing idea creation process</li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a> them</li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Share ideas</h2>
-        <img src="../images/idea-icon-bubble.svg" class="img-rounded" alt="idea" width="200" height="200"/>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add your idea to the idea pool of the month</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Get feedback</h2>
-        <img src="../images/idea-factory.svg" class="img-rounded" alt="idea" width="200" height="200"/>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Get feedback and votes</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Once in the month shortlist submit a pitch.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Get investors votes</a></li>
-        </ul>
+<style>
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+    padding: 2px 16px;
+}
+</style>
+<div class="container-fluid main-container">
+    <div class="col-md-10 content">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Create your idea wizzard
+            </div>
+            <div class="panel-body">
+                <div id="myDIV" class="header">
+                  <input type="text" id="ideaTitleInput" name="ideaTitle" placeholder="Idea Title..."> author <input type="text" id="ideaAuthorInput" name="ideaAuthor" placeholder="Idea Author Name...">
+                  <button type="button" onclick="newIdea()" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Add
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+
+<div class="container panel panel-default">
+	<div class="row panel-body" id="ideaList">
+		<div class="col-sm-4">
+            <h2>Idea 1</h2>
+            <div class="card">
+              <img src="../images/idea-light-bulb.svg" alt="Avatar" style="width:20%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4> 
+                <p>Interior Designer</p> 
+              </div>
+            </div>
+		</div>
+        <div class="col-sm-4">
+            <h2>Idea 2</h2>
+            <div class="card">
+              <img src="../images/idea-light-bulb.svg" alt="Avatar" style="width:20%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4> 
+                <p>Interior Designer</p> 
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h2>Idea 3</h2>
+            <div class="card">
+              <img src="../images/idea-light-bulb.svg" alt="Avatar" style="width:20%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4> 
+                <p>Interior Designer</p> 
+              </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <h2>Idea 4</h2>
+            <div class="card">
+              <img src="../images/idea-light-bulb.svg" alt="Avatar" style="width:20%">
+              <div class="container">
+                <h4><b>Jane Doe</b></h4> 
+                <p>Interior Designer</p> 
+              </div>
+            </div>
+        </div>
+		
+    </div>
+</div>
+
+
+
+<!-- Markup for a side menu for future use
+    <div class="col-md-2 sidebar">
+        <div class="row">
+            <!-- Menu --
+            <div class="side-menu">
+                <nav class="navbar navbar-default" role="navigation">
+                    <!-- Main Menu --
+                    <div class="side-menu-container">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-plane"></span> Active Link</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Link</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse --
+                </nav>
+
+            </div>
+        </div>
+    </div>
+
+ -->
