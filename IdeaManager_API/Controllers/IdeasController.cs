@@ -11,9 +11,18 @@ namespace IdeaManager_API.Controllers
     {
         // GET api/Ideas
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "Idea1 Title", "Idea 1 Description" };
+            // Return random dummy data
+            var json =
+                        "[{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Moon Garcia\",\"title\": \"lorum pisesmin verum\"}," +
+                        "{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Roach Brewer\",\"title\": \"lorum pisesmin verum\"}," +
+                        "{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Barber Conrad\",\"title\": \"lorum pisesmin verum\"}," +
+                        "{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Ross Tate\",\"title\": \"lorum pisesmin verum\"}," +
+                        "{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Alexander Beasley\",\"title\": \"lorum pisesmin verum\"}," +
+                        "{\"picture\": \"http://placehold.it/32x32\",\"name\": \"Hunter Michael\",\"title\": \"lorum pisesmin verum\"}]";           
+            return json;
+
         }
 
         // GET api/Ideas/5
