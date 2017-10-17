@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace IdeaManager_API.Controllers
 {
@@ -11,9 +12,17 @@ namespace IdeaManager_API.Controllers
     {
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "value1", "value2" };
+            var RegisteredUsers = new List<Idea>();
+            RegisteredUsers.Add(new Idea() { Title = "Duis bibendum", Name = "Bryon Hetrick" });
+            RegisteredUsers.Add(new Idea() { Title = "Donec semper sapien a libero", Name = "Nicole Wilcox" });
+            RegisteredUsers.Add(new Idea() { Title = "Sed ante", Name = "Adrian Martinson" });
+            RegisteredUsers.Add(new Idea() { Title = "Sed ante blessum", Name = "Nora Osborn" });
+
+            string json = JsonConvert.SerializeObject(RegisteredUsers);
+            return json;
+            //return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5
@@ -40,5 +49,14 @@ namespace IdeaManager_API.Controllers
         public void Delete(int id)
         {
         }
+    }
+}
+
+namespace IdeaManager_API.Controllers
+{
+    public class Idea
+    {
+        public string Title { get; set; }
+        public string Name { get; set; }
     }
 }
