@@ -1,5 +1,17 @@
 ﻿// Write your JavaScript code.
 
+function UserAction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var jsonResponse = JSON.parse(this.responseText);
+        alert(jsonResponse);
+      }
+    };
+    xhttp.open("GET", "/api", true);
+    xhttp.send();
+}
+
 function newIdea() {
       if ($("input[name=ideaTitle]").val() === '' || $("input[name=ideaAuthor]").val() === '') {
         alert("You must write something!");
