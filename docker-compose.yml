@@ -15,8 +15,3 @@ services:
     image: ideamanager_fe
     expose: 
       - "80"
-
-  ideaManApi:
-    image: ideamanager_api
-    expose:
-      - "80"
