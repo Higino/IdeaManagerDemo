@@ -9,7 +9,6 @@ services:
       - /tmp/IdeaManager_RP/conf:/etc/nginx/sites-enabled
     links:
       - ideaManWeb
-      - ideaManApi
 
   ideaManWeb:
     image: ideamanager_fe
