@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace IdeaManager_API.Models
+namespace IdeaManager_FE.Models
 {
     public class IdeaContext : DbContext
     {

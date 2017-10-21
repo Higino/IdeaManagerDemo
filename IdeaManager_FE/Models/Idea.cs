@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IdeaManager_API.Models
+namespace IdeaManager_FE.Models
 {
     public class Idea
     {

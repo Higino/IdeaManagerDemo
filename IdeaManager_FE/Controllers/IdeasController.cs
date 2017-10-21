@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using IdeaManager_API.Models;
+using IdeaManager_FE.Models;
 using System.Linq;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace IdeaManager_API.Controllers
 
             if (_context.IdeaItems.Count() == 0)
             {
-                _context.IdeaItems.Add(new Idea { Title = "Item1", Author = "Higino Silva", IdeaDate = DateTime.Now });
+                _context.IdeaItems.Add(new Idea { Title = "Sample Idea", Author = "Test User", IdeaDate = DateTime.Now });
                 _context.SaveChanges();
             }
         }
@@ -26,7 +26,6 @@ namespace IdeaManager_API.Controllers
         [HttpGet]
         public IEnumerable<Idea> Get()
         {
-            System.Diagnostics.Debug.WriteLine("**************** Invoking GET ******************");
             return _context.IdeaItems.ToList();
 
         }
