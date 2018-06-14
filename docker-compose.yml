@@ -2,6 +2,7 @@ version: '2'
 
 services:
   nginx-proxy:
+    build: ./IdeaManager_RP
     image: ideamanager_rp
     ports:
       - "80:80"
@@ -9,14 +10,9 @@ services:
       - /tmp/IdeaManager_RP/conf:/etc/nginx/sites-enabled
     links:
       - ideaManWeb
-      - ideaManApi
 
   ideaManWeb:
+    build: ./IdeaManager_FE
     image: ideamanager_fe
     expose: 
-      - "80"
-
-  ideaManApi:
-    image: ideamanager_api
-    expose:
       - "80"
